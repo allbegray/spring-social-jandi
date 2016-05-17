@@ -5,6 +5,7 @@ import com.fasterxml.jackson.databind.ObjectMapper;
 import org.springframework.http.*;
 import org.springframework.social.jandi.WebhookOperations;
 import org.springframework.social.jandi.type.ConnectInfo;
+import org.springframework.social.jandi.type.JandiMessage;
 import org.springframework.web.client.RestOperations;
 
 import java.util.HashMap;
@@ -27,15 +28,10 @@ public class WebhookTemplate implements WebhookOperations {
     }
 
     @Override
-    public boolean sendMessage(String body, String connectColor, List<ConnectInfo> connectInfos) {
-        Map<String, Object> params = new HashMap<String, Object>();
-        params.put("body", body);
-        params.put("connectColor", connectColor);
-        params.put("connectInfo", connectInfos);
-
+    public boolean sendMessage(JandiMessage message) {
         String requestJson = null;
         try {
-            requestJson = objectMapper.writeValueAsString(params);
+            requestJson = objectMapper.writeValueAsString(message);
         } catch (JsonProcessingException e) {
             throw new RuntimeException(e);
         }
@@ -47,6 +43,15 @@ public class WebhookTemplate implements WebhookOperations {
 
         ResponseEntity<String> responseEntity = this.restOperations.postForEntity(webhookUrl, httpEntity, String.class);
         return responseEntity.getStatusCode() == HttpStatus.OK;
+    }
+
+    @Override
+    public boolean sendMessage(String body, String connectColor, List<ConnectInfo> connectInfos) {
+        JandiMessage message = new JandiMessage();
+        message.setBody(body);
+        message.setConnectColor(connectColor);
+        message.setConnectInfos(connectInfos);
+        return sendMessage(message);
     }
 
 }
