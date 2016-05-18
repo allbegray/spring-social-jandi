@@ -3,7 +3,7 @@
 
     <groupId>net.ttddyy</groupId>
     <artifactId>spring-social-jandi</artifactId>
-    <version>1.0.0-SNAPSHOT</version>
+    <version>1.0.0-RELEASE</version>
     <packaging>jar</packaging>
 
     <name>spring-social-jandi</name>
