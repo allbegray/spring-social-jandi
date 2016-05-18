@@ -2,7 +2,7 @@
 
 spring-social-jandi
 =============
-잔디(Jandi) 커넥트, Webhook 수신 (Incoming Webhook) API Java Clien
+잔디(Jandi) 커넥트, Webhook 수신 (Incoming Webhook) API Java Client
 
 ## Maven
 Step 1. Add the JitPack repository to your build file
