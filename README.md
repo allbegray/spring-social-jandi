@@ -1,4 +1,4 @@
-[![Release](https://img.shields.io/github/release/allbegray/spring-social-jandi.svg?label=JitPack)](https://jitpack.io/#allbegray/slack-api)
+[![Release](https://img.shields.io/github/release/allbegray/spring-social-jandi.svg?label=JitPack)](https://jitpack.io/#allbegray/spring-social-jandi)
 
 spring-social-jandi
 =============
