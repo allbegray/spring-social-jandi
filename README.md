@@ -1,4 +1,4 @@
-[![Release](https://img.shields.io/github/release/flowctrl/spring-social-jandi.svg?label=JitPack)](https://jitpack.io/#flowctrl/slack-api)
+[![Release](https://img.shields.io/github/release/allbegray/spring-social-jandi.svg?label=JitPack)](https://jitpack.io/#allbegray/slack-api)
 
 spring-social-jandi
 =============
@@ -15,7 +15,7 @@ Step 1. Add the JitPack repository to your build file
 Step 2. Add the dependency in the form
 ```xml
 <dependency>
-    <groupId>com.github.flowctrl</groupId>
+    <groupId>com.github.allbegray</groupId>
     <artifactId>spring-social-jandi</artifactId>
     <version>v1.0.0.RELEASE</version>
 </dependency>
